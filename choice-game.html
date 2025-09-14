@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Choice Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image:url('images/bg-choice.png'); background-size:cover;">
+<h2>Choice Game</h2>
+<div id="wallet">Coins: 0</div>
+<div class="choices">
+    <button onclick="checkAnswer('A')">A</button>
+    <button onclick="checkAnswer('B')">B</button>
+    <button onclick="checkAnswer('C')">C</button>
+</div>
+<script src="wallet.js"></script>
+<script>
+const correctChoice = 'B';
+function checkAnswer(selected) {
+    if(selected === correctChoice) { addCoins(10); alert('Correct! Coins added.'); }
+    else { alert('Wrong!'); }
+}
+</script>
+</body>
+</html>

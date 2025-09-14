@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Color Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image:url('images/bg-color.png'); background-size:cover;">
+<h2>Color Game</h2>
+<div id="wallet">Coins: 0</div>
+<div class="colors">
+    <img src="images/color1.png" onclick="checkAnswer('color1')">
+    <img src="images/color2.png" onclick="checkAnswer('color2')">
+    <img src="images/color3.png" onclick="checkAnswer('color3')">
+</div>
+<script src="wallet.js"></script>
+<script>
+const correctColor = 'color2';
+function checkAnswer(selected) {
+    if(selected === correctColor) { addCoins(10); alert('Correct! Coins added.'); }
+    else { alert('Wrong!'); }
+}
+</script>
+</body>
+</html>
